@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
-    "fmt": "prettier --write src/**/*.{js,ts,jsx,tsx,cjs,cts,mjs,mts,vue,astro,html}"
+    "fmt": "prettier --write src/**/*.{js,ts,jsx,tsx,cjs,cts,mjs,mts,vue,astro,html}",
+    "prepare": "husky"
   },
   "browserslist": "defaults and supports async-functions",
   "keywords": [],
@@ -19,7 +20,13 @@
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
+    "husky": "^9.1.7",
     "parcel-bundler": "^1.12.5",
     "prettier": "^3.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "test"
+    }
   }
 }
