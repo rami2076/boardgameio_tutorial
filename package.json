@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html --open"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
   "browserslist": "defaults and supports async-functions",
   "keywords": [],
@@ -13,9 +14,10 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
-    "boardgame.io": "^0.22.1"
+    "boardgame.io": "^0.50.2"
   },
   "devDependencies": {
+    "@babel/core": "7.2.0",
     "parcel-bundler": "^1.12.5"
   }
 }
