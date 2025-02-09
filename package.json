@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
-    "fmt": "prettier --write src/**/*.{js,ts,jsx,tsx,cjs,cts,mjs,mts,vue,astro,html}",
+    "fmt": "prettier --write src/**/*.{js,html}",
+    "extra-fmt": "prettier --write src/**/*.{js,jsx,tsx,cjs,cts,mjs,mts,vue,astro,html}",
     "prepare": "husky"
   },
   "browserslist": "defaults and supports async-functions",
