@@ -1,4 +1,4 @@
-import { INVALID_MOVE } from "boardgame.io/core";
+import { INVALID_MOVE } from 'boardgame.io/core';
 
 export const TicTacToe = {
   setup: () => ({ cells: Array(9).fill(null) }),
@@ -30,7 +30,7 @@ export const TicTacToe = {
       let moves = [];
       for (let i = 0; i < 9; i++) {
         if (G.cells[i] === null) {
-          moves.push({ move: "clickCell", args: [i] });
+          moves.push({ move: 'clickCell', args: [i] });
         }
       }
       return moves;
