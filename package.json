@@ -4,10 +4,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html",
-    "fmt": "prettier --write src/**/*.js",
-    "fmt2": "prettier --write *.html",
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html",
+    "fmt": "prettier --write src/**/*.{html,js}",
+    "cleanCahce": "rm -rf ./.cache",
+    "cleanDist": "rm -rf ./dist",
+    "cleanDependency": "rm -rf ./dist",
     "extra-fmt": "prettier --write src/**/*.{js,jsx,tsx,cjs,cts,mjs,mts,vue,astro,html}",
     "prepare": "husky"
   },

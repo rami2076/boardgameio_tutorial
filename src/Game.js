@@ -4,20 +4,19 @@ export const TicTacToe = {
   setup: () => ({ cells: Array(9).fill(null) }),
 
   turn: {
-    minMoves: 1,
-    maxMoves: 1,
+    moveLimit: 1,
   },
 
   moves: {
-    clickCell: ({ G, playerID }, id) => {
+    clickCell: (G, ctx, id) => {
       if (G.cells[id] !== null) {
         return INVALID_MOVE;
       }
-      G.cells[id] = playerID;
+      G.cells[id] = ctx.currentPlayer;
     },
   },
 
-  endIf: ({ G, ctx }) => {
+  endIf: (G, ctx) => {
     if (IsVictory(G.cells)) {
       return { winner: ctx.currentPlayer };
     }
@@ -27,6 +26,7 @@ export const TicTacToe = {
   },
 };
 
+// Return true if `cells` is in a winning configuration.
 function IsVictory(cells) {
   const positions = [
     [0, 1, 2],

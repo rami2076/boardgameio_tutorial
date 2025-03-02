@@ -32,14 +32,14 @@ class TicTacToeClient {
   }
 
   attachListeners() {
-    // This event handler will read the cell id from a cell’s
+    // Attach event listeners to the board cells.
+    const cells = this.rootElement.querySelectorAll(".cell");
+    // This event handler will read the cell id from the cell’s
     // `data-id` attribute and make the `clickCell` move.
     const handleCellClick = (event) => {
       const id = parseInt(event.target.dataset.id);
       this.client.moves.clickCell(id);
     };
-    // Attach the event listener to each of the board cells.
-    const cells = this.rootElement.querySelectorAll(".cell");
     cells.forEach((cell) => {
       cell.onclick = handleCellClick;
     });
