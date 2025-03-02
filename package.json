@@ -4,9 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html",
-    "fmt": "prettier --write src/**/*.{js,html}",
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "fmt": "prettier --write src/**/*.js",
+    "fmt2": "prettier --write *.html",
     "extra-fmt": "prettier --write src/**/*.{js,jsx,tsx,cjs,cts,mjs,mts,vue,astro,html}",
     "prepare": "husky"
   },
@@ -17,7 +18,7 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
-    "boardgame.io": "^0.50.2"
+    "boardgame.io": "0.45.0"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
