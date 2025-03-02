@@ -22,3 +22,9 @@ npm-check-updates
 # server error workaround.
 
 https://github.com/boardgameio/boardgame.io/issues/1200
+
+# REF
+
+## plugins
+
+- https://delucis.github.io/bgio-effects/tutorial/
