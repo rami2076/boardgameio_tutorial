@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node -r esm src/server.js",
     "start": "parcel src/index.html --open",
     "build": "parcel build src/index.html",
     "fmt": "prettier --write src/**/*.{html,js}",
@@ -20,7 +21,8 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
-    "boardgame.io": "0.45.0"
+    "boardgame.io": "0.45.0",
+    "esm": "^3.2.25"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
