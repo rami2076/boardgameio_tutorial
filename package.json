@@ -1,7 +1,11 @@
 {
   "name": "boardgameio_demo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
+  "engines": {
+    "node": "v22.x",
+    "npm": "10.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node src/server.js",
