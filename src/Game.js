@@ -1,4 +1,4 @@
-import { INVALID_MOVE } from 'boardgame.io/core';
+import { INVALID_MOVE } from 'boardgame.io/dist/esm/core.js';
 
 export const TicTacToe = {
   setup: () => ({ cells: Array(9).fill(null) }),
@@ -8,7 +8,7 @@ export const TicTacToe = {
   },
 
   moves: {
-    clickCell: (G, ctx, id) => {
+    clickCell: ({ G, ctx }, id) => {
       if (G.cells[id] !== null) {
         return INVALID_MOVE;
       }
@@ -16,7 +16,7 @@ export const TicTacToe = {
     },
   },
 
-  endIf: (G, ctx) => {
+  endIf: ({ G, ctx }) => {
     if (IsVictory(G.cells)) {
       return { winner: ctx.currentPlayer };
     }
@@ -26,7 +26,7 @@ export const TicTacToe = {
   },
 
   ai: {
-    enumerate: (G, ctx) => {
+    enumerate: ({ G, ctx }) => {
       let moves = [];
       for (let i = 0; i < 9; i++) {
         if (G.cells[i] === null) {
