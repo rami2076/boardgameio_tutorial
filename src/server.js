@@ -1,5 +1,5 @@
-const { Server, Origins } = require('boardgame.io/server');
-const { TicTacToe } = require('./Game');
+import { Server, Origins } from 'boardgame.io/dist/cjs/server.js';
+import { TicTacToe } from './Game.js';
 
 const server = Server({
   games: [TicTacToe],
